@@ -1,18 +1,19 @@
 import React from 'react'
+import {useContext,useEffect,useState} from 'react'
 import styled from 'styled-components'
-
+import {Mycontext} from '../Context'
 
 const Allnavbar = styled.div`
 width : 100%;
 height : 70px;
 border-bottom : solid 2px lightgray;
-margin :0;
-padding : 0;
 display : flex;
 justify-content : space-between;
 position : fixed;
 top : 0;
-left:  0
+left:  0;
+z-index : 10000;
+background-color : #f4f4f4;
 
 `
 
@@ -21,7 +22,8 @@ color : black;
 font-weight  : 700;
 font-family : monospace;
 margin-left : 30px;
-font-size :20px 
+font-size :20px ;
+margin-top : 20px
 `
 
 
@@ -39,7 +41,7 @@ margin-top : 20px
     <nav>
     <Allnavbar>
       <Baslik>Count</Baslik>
-      <Input placeholder = "Search"></Input>
+      <Input placeholder = "Search" ></Input>
     
     
     </Allnavbar> 
